@@ -1,0 +1,34 @@
+html, :root, body{
+    height: 120vh;
+}
+@media (max-width: 650px){
+    html, :root, body{
+        width: min-content;
+    }
+}
+#header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #fca5a5;
+}
+.home-nav, .menu-nav, .contact-nav{
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #fee2e2;
+    border-bottom: 0;
+    margin: 1rem;
+}
+.home-nav:hover, .menu-nav:hover, .contact-nav:hover{
+    background-color: #f87171;
+}
+.content-body{
+    background-color: #fee2e2;
+}
+#content{
+    text-align: center;
+    height: 100%;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+}
