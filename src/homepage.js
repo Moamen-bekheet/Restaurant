@@ -1,4 +1,5 @@
 import photo from './pizza.jpg';
+import {home, contact, menu,headerDiv} from './index';
 export const contentDiv = document.getElementById('content');
 export const bodyDiv = document.createElement('div');
 bodyDiv.classList.add('content-body')

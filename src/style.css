@@ -32,3 +32,23 @@ html, :root, body{
     display: grid;
     grid-template-rows: max-content 1fr;
 }
+.menu-items-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+    gap:1rem;
+    padding: 1rem;
+}
+.item-card{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    width: fit-content;
+    background-color: #f87171;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.item-card img{
+    width: 130px;
+    height: auto;
+}

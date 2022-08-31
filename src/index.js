@@ -1,15 +1,36 @@
-import {addProductInfo, contentDiv,generateHomepage} from './homepage.js';
+import {generateHomepage, bodyDiv} from './homepage.js';
+import { addMenuItem } from './menu.js';
 import './style.css';
+import veggies from './Veggies.jpg';
+import wholePizza from './WholePizza.jpg';
 
-const headerDiv = document.createElement('div');
+export const headerDiv = document.createElement('div');
 headerDiv.id = 'header';
-const home = document.createElement('div');
-const menu = document.createElement('div');
-const contact = document.createElement('div');
+export const home = document.createElement('div');
+export const menu = document.createElement('div');
+export const contact = document.createElement('div');
 
 generateHomepage();
 
 home.addEventListener('click',()=>{
-    document.querySelector('content-body').innerHTML = '';
+    bodyDiv.innerHTML = '';
+    bodyDiv.classList.remove('menu-items-container');
+    menu.style.backgroundColor = 'transparent';
+    contact.style.backgroundColor = 'transparent';
     generateHomepage();
 });
+
+menu.addEventListener('click',()=>{
+    bodyDiv.innerHTML = '';
+    home.style.backgroundColor = 'transparent';
+    contact.style.backgroundColor = 'transparent';
+    addMenuItem('Veggies','vegetables mid-sized pizza', '100EGP', veggies);
+    addMenuItem('whole thing','vegetables pizza', '200EGP', wholePizza);
+})
+
+contact.addEventListener('click', ()=>{
+    bodyDiv.innerHTML = '';
+    bodyDiv.classList.remove('menu-items-container');
+    home.style.backgroundColor = 'transparent';
+    contact.style.backgroundColor = 'transparent';
+})

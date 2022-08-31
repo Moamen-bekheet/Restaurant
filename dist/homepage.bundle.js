@@ -279,7 +279,7 @@ eval("module.exports = __webpack_require__.p + \"594ebb5d9f0bed3cb037.jpg\";\n\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/homepage.js");
 /******/ 	
 /******/ })()
 ;
