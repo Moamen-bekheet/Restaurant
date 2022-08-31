@@ -14,7 +14,7 @@ function addPhoto(){
 
 export function addProductInfo(){
     const header = document.createElement('h1');
-    header.textContent = "Zombie";
+    header.textContent = "Zombie Pizza";
     bodyDiv.appendChild(header);
     addPhoto();
     const description = document.createElement('p');

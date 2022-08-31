@@ -1,5 +1,6 @@
 import {generateHomepage, bodyDiv} from './homepage.js';
 import { addMenuItem } from './menu.js';
+import { addContact } from './contact.js';
 import './style.css';
 import veggies from './Veggies.jpg';
 import wholePizza from './WholePizza.jpg';
@@ -15,6 +16,7 @@ generateHomepage();
 home.addEventListener('click',()=>{
     bodyDiv.innerHTML = '';
     bodyDiv.classList.remove('menu-items-container');
+    bodyDiv.classList.remove('flex-container');
     menu.style.backgroundColor = 'transparent';
     contact.style.backgroundColor = 'transparent';
     generateHomepage();
@@ -22,6 +24,7 @@ home.addEventListener('click',()=>{
 
 menu.addEventListener('click',()=>{
     bodyDiv.innerHTML = '';
+    bodyDiv.classList.remove('flex-container');
     home.style.backgroundColor = 'transparent';
     contact.style.backgroundColor = 'transparent';
     addMenuItem('Veggies','vegetables mid-sized pizza', '100EGP', veggies);
@@ -32,5 +35,6 @@ contact.addEventListener('click', ()=>{
     bodyDiv.innerHTML = '';
     bodyDiv.classList.remove('menu-items-container');
     home.style.backgroundColor = 'transparent';
-    contact.style.backgroundColor = 'transparent';
+    menu.style.backgroundColor = 'transparent';
+    addContact('Zombie Pizza','+11 58976','Zombie@Pizza.com');
 })
